@@ -1,0 +1,20 @@
+service: business-logic
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-central-1'}
+
+functions:
+  helloWorld:
+    handler: handler.hello
+    events:
+      - http:
+          path: helloWorld
+          method: get
+          cors: true
+    environment:
+      NODE_PATH: "./:/opt/node_modules"
+    layers:
+      - arn:aws:lambda:eu-central-1:122161723528:layer:dev-base-layer:2 #replace this with arn from layer, or create terraform variable with layer ARN

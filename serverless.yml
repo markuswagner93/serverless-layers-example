@@ -1,0 +1,16 @@
+service: microservices
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-central-1'}
+
+layers:
+  dependencies:
+    path: dependencieslayer
+    name: ${self:provider.stage}-dependencies-layer # optional
+    description: Description of what the lambda layer does # optional
+    compatibleRuntimes: # optional
+      - nodejs8.10
+      - nodejs10.x
