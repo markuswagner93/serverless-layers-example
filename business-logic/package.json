@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "business-dependencies": "file:../business-dependencies"
+    "business-dependencies": "file:../business-dependencies",
+    "serverless-latest-layer-version": "^1.0.3"
   }
 }

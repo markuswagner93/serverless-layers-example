@@ -1,10 +1,13 @@
 service: business-logic
 
+plugins:
+  - serverless-latest-layer-plugin
+
 provider:
   name: aws
   runtime: nodejs10.x
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'eu-central-1'}
+  stage: ${opt:stage, 'dev'} # current stage dev/test/prod
+  region: ${opt:region, 'eu-central-1'} / current AWS Region
 
 functions:
   helloWorld:
@@ -15,6 +18,6 @@ functions:
           method: get
           cors: true
     environment:
-      NODE_PATH: "./:/opt/node_modules"
+      NODE_PATH: "./:/opt/node_modules" # Important otherwise node_modules imported can not be found
     layers:
-      - arn:aws:lambda:eu-central-1:122161723528:layer:dev-base-layer:2 #replace this with arn from layer, or create terraform variable with layer ARN
+      - arn:aws:lambda:eu-central-1:122161723528:layer:dev-base-layer:latest #replace this with arn from layer, or create terraform variable with layer ARN
