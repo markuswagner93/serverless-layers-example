@@ -8,7 +8,7 @@ provider:
 
 layers:
   dependencies:
-    path: dependencieslayer
+    path: dependencies-layer
     name: ${self:provider.stage}-dependencies-layer # optional
     description: Description of what the lambda layer does # optional
     compatibleRuntimes: # optional
