@@ -7,7 +7,11 @@ provider:
   name: aws
   runtime: nodejs10.x
   stage: ${opt:stage, 'dev'} # current stage dev/test/prod
-  region: ${opt:region, 'eu-central-1'} / current AWS Region
+  region: ${opt:region, 'eu-central-1'} # current AWS Region
+
+custom:
+  config: ${file(../ouputs.json)}
+  ACCOUNT_ID: ${self:custom.config.account_id}
 
 functions:
   helloWorld:
@@ -20,4 +24,4 @@ functions:
     environment:
       NODE_PATH: "./:/opt/node_modules" # Important otherwise node_modules imported can not be found
     layers:
-      - arn:aws:lambda:eu-central-1:122161723528:layer:dev-base-layer:latest #replace this with arn from layer, or create terraform variable with layer ARN
+      - arn:aws:lambda:${opt:region, 'eu-central-1'}:${self:custom.ACCOUNT_ID}:layer:${opt:stage, 'dev'}-base-layer:latest #replace this with arn from layer, or create terraform variable with layer ARN

@@ -9,7 +9,6 @@
   "license": "ISC",
   "devDependencies": {
     "business-dependencies": "file:../business-dependencies",
-    "serverless-latest-layer-version": "^1.0.3",
     "moment": "^2.24.0"
   }
 }

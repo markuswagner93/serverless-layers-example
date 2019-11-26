@@ -1,0 +1,18 @@
+{
+  "name": "serverless-layers-example",
+  "version": "1.0.0",
+  "description": "This is the example project for running serverless with AWS Lambda Layers",
+  "devDependencies": {
+    "serverless-latest-layer-version": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markuswagner93/serverless-layers-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markuswagner93/serverless-layers-example/issues"
+  },
+  "homepage": "https://github.com/markuswagner93/serverless-layers-example#readme"
+}
