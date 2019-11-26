@@ -1,7 +1,7 @@
 {
-  "name": "dependencieslayer",
+  "name": "dependencies-layer",
   "version": "1.0.0",
-  "description": "",
+  "description": "In here all the dependencies will be collected for the Application.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "business-dependencies": "file:../business-dependencies"
-  },
-  "devDependencies": {
+    "business-dependencies": "file:../business-dependencies",
     "moment": "^2.24.0"
   }
 }
