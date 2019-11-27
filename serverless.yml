@@ -2,13 +2,13 @@ service: microservices
 
 provider:
   name: aws
-  runtime: nodejs10.x
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'eu-central-1'}
+  runtime: nodejs10.x # programming language & version
+  stage: ${opt:stage, 'dev'} # current stage dev/test/prod
+  region: ${opt:region, 'eu-central-1'} # current AWS Region
 
 layers:
   dependencies:
-    path: dependencies-layer
+    path: dependencies-layer # required path of layer
     name: ${self:provider.stage}-dependencies-layer # optional
     description: Description of what the lambda layer does # optional
     compatibleRuntimes: # optional

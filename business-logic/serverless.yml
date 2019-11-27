@@ -24,4 +24,7 @@ functions:
     environment:
       NODE_PATH: "./:/opt/node_modules" # Important otherwise node_modules imported can not be found
     layers:
-      - arn:aws:lambda:${opt:region, 'eu-central-1'}:${self:custom.ACCOUNT_ID}:layer:${opt:stage, 'dev'}-base-layer:latest #replace this with arn from layer, or create terraform variable with layer ARN
+      - arn:aws:lambda:${opt:region, 'eu-central-1'}:${self:custom.ACCOUNT_ID}:layer:${opt:stage, 'dev'}-base-layer:latest 
+      # ARN is created automatically with given informations
+
+
