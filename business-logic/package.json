@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "business-dependencies": "file:../business-dependencies"
+    "business-dependencies": "file:../business-dependencies",
+    "moment": "^2.24.0"
   }
 }

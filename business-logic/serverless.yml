@@ -1,10 +1,17 @@
 service: business-logic
 
+plugins:
+  - serverless-latest-layer-plugin # activate plugin
+
 provider:
   name: aws
-  runtime: nodejs8.10
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'eu-central-1'}
+  runtime: nodejs10.x # programming language & version
+  stage: ${opt:stage, 'dev'} # current stage dev/test/prod
+  region: ${opt:region, 'eu-central-1'} # current AWS Region
+
+custom:
+  config: ${file(../ouputs.json)} # load json
+  ACCOUNT_ID: ${self:custom.config.account_id} #reference of the id 
 
 functions:
   helloWorld:
