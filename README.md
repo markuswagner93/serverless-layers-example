@@ -1,4 +1,6 @@
-# Lambda Layers Example
+# Lambda Layers Step 1
+
+In this very first example, we simply create a lambda, which prints out hello world.
 
 This example describes how to use the Serverless Framework to create a microservices architecture with AWS Lambda Layers.
 
