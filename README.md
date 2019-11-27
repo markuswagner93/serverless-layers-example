@@ -1,19 +1,5 @@
-# Lambda Layers Example
+# Lambda Layers Step 3
 
-This example describes how to use the Serverless Framework to create a microservices architecture with AWS Lambda Layers.
+In this very last step we will add the layer to the lambda and update the code with the wanted dependencies `moment` and the `helloWorld` handler.
 
-# Dependencies
-
-- Node.JS 10
-- Serverless
-- Yarn
-
-# Setup
-
-Replace Account ID from AWS Account in outputs.json.
-
-Run `serverless deploy -v -stage dev` in the root folder of this project with your AWS Account configured in AWS CLI. 
-This will deploy the dependency layer, Run `serverless deploy -v -stage dev` in the `business-logic folder` folder to deploy the hello World Lambda with the dependencies injected in the layer.
-
-IMPORTANT:
-Dependencieslayer must be in a different folder than the business-logic, and then installed as devDependency in to the dependencieslayer and not in the business-logic. All Dependencies that are shared should be installed in to the dependencieslayer.
+We can now finally deploy all our changes!
