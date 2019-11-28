@@ -2,6 +2,8 @@
 
 This example describes how to use the Serverless Framework to create a microservices architecture with AWS Lambda Layers.
 
+The original Medium Article is made with Zoi by Markus Wagner and is soon gonna be published at Medium.com
+
 # Dependencies
 
 - Node.JS 10

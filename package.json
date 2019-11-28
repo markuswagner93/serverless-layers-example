@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/markuswagner93/serverless-layers-example.git"
   },
-  "author": "",
+  "author": "Markus Wagner/Zoi TechCon GmbH",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/markuswagner93/serverless-layers-example/issues"
