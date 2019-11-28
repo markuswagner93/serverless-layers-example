@@ -6,14 +6,17 @@ This example describes how to use the Serverless Framework to create a microserv
 
 - Node.JS 10
 - Serverless
-- Yarn
 
 # Setup
 
-Replace Account ID from AWS Account in outputs.json.
+See steps in article, or checkout Branch step_1, step_2 and step_3 too see the changes, or follow following instructions:
 
-Run `serverless deploy -v -stage dev` in the root folder of this project with your AWS Account configured in AWS CLI. 
-This will deploy the dependency layer, Run `serverless deploy -v -stage dev` in the `business-logic folder` folder to deploy the hello World Lambda with the dependencies injected in the layer.
+1. Install Serverless
+2. Configure AWS Account in AWS CLI
+3. Replace Account ID from AWS Account in outputs.json (Tutorial)[https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html].
+4. Run `serverless deploy -v -stage dev` in the root folder of this project, this will deploy the dependency layer. 
+5. Change the current directory to `business-logic\` and run `serverless deploy -v -stage dev` to deploy the hello World Lambda with the dependencies injected from the layer.
+6. Checkout Lambda created by serverless in the AWS Console
 
-IMPORTANT:
-Dependencieslayer must be in a different folder than the business-logic, and then installed as devDependency in to the dependencieslayer and not in the business-logic. All Dependencies that are shared should be installed in to the dependencieslayer.
+*IMPORTANT*:
+dependencies-layer must be in a different folder than the business-logic, and then installed as devDependency in to the dependencieslayer and not in the business-logic. All Dependencies that are shared should be installed in to the dependencies-layer.
